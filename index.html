@@ -52,7 +52,7 @@ body{
 /* ====== NAV ====== */
 #nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
-  min-height:78px;
+  min-height:240px;
   display:flex;align-items:center;justify-content:space-between;
   padding:12px 48px;
   background:rgba(10, 10, 10, 0.9);
@@ -99,7 +99,7 @@ body{
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
 /* ====== HERO ====== */
-#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:148px 48px 80px}
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:272px 48px 80px}
 .hero-bg-img{
   position:absolute;inset:0;z-index:1;opacity:0.1;
   background:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -148,7 +148,7 @@ body{
 /* ====== SHARED ====== */
 section{padding:100px 48px; background: rgba(0,0,0,0.25);}
 section:nth-child(even) { background: transparent; }
-section[id],header[id]{scroll-margin-top:160px}
+section[id],header[id]{scroll-margin-top:250px}
 #nav.scrolled ~ section[id],#nav.scrolled ~ header[id]{scroll-margin-top:80px}
 .section-inner{max-width:1200px;margin:0 auto}
 .section-eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:10px}
@@ -302,6 +302,11 @@ section[id],header[id]{scroll-margin-top:160px}
 }
 .board-card:hover .board-img-wrap img {
     filter: grayscale(0%);
+}
+/* Zoom-out override for photos that fill the circle too tightly */
+.board-img-wrap img.img-zoom-out {
+    transform: scale(0.78);
+    object-position: center center;
 }
 .board-name {
     font-family: 'Playfair Display', serif;
@@ -461,14 +466,15 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
         <span class="stag"><span class="stag-dot"></span>Advocacy Organizations</span>
         <span class="stag"><span class="stag-dot"></span>HCBS Providers</span>
         <span class="stag"><span class="stag-dot"></span>Individuals with Disabilities</span>
-        <span class="stag"><span class="stag-dot"></span>Families & Caregivers</span>
+        <span class="stag"><span class="stag-dot"></span>Families &amp; Caregivers</span>
         <span class="stag"><span class="stag-dot"></span>Interdisciplinary Teams</span>
         <span class="stag"><span class="stag-dot"></span>State Governments</span>
         <span class="stag"><span class="stag-dot"></span>Medicaid Agencies</span>
         <span class="stag"><span class="stag-dot"></span>Advocacy Organizations</span>
         <span class="stag"><span class="stag-dot"></span>HCBS Providers</span>
         <span class="stag"><span class="stag-dot"></span>Individuals with Disabilities</span>
-        <span class="stag"><span class="stag-dot"></span>Families & Caregivers</span>
+        <span class="stag"><span class="stag-dot"></span>Families &amp; Caregivers</span>
+        <span class="stag"><span class="stag-dot"></span>Interdisciplinary Teams</span>
       </div>
     </div>
   </section>
@@ -627,7 +633,7 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
           <!-- Board Member 3: Patricia Dowse -->
           <div class="board-card reveal">
               <div class="board-img-wrap">
-                  <img src="Patricia%20Dowse.avif" alt="Patricia Dowse">
+                  <img src="Patricia%20Dowse.avif" alt="Patricia Dowse" class="img-zoom-out">
               </div>
               <h3 class="board-name">Patricia Dowse</h3>
               <p class="board-title">Board Member — Workforce Development & Disability Employment</p>
@@ -640,7 +646,7 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
           <!-- Board Member 4: Roger Deshaies -->
           <div class="board-card reveal reveal-delay-1">
               <div class="board-img-wrap">
-                  <img src="Roger%20Deshaies.avif" alt="Roger Deshaies">
+                  <img src="Roger%20Deshaies.avif" alt="Roger Deshaies" class="img-zoom-out">
               </div>
               <h3 class="board-name">Roger Deshaies</h3>
               <p class="board-title">Board Member — Policy Analysis & Medicaid Strategy</p>
