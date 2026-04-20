@@ -79,7 +79,7 @@ body{
   flex-shrink:0;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-#nav.scrolled .nav-logo img{height:50px;}
+#nav.scrolled .nav-logo img{height:75px;}
 
 .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
 .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;position:relative; cursor:pointer;}
@@ -99,7 +99,7 @@ body{
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
 /* ====== HERO ====== */
-#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:272px 48px 80px}
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:310px 48px 80px}
 .hero-bg-img{
   position:absolute;inset:0;z-index:1;opacity:0.1;
   background:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -249,7 +249,7 @@ section[id],header[id]{scroll-margin-top:250px}
 
 /* ====== ABOUT / BOARD SPECIFIC CSS ====== */
 .page-header {
-    padding: 180px 48px 80px;
+    padding: 280px 48px 80px;
     text-align: center;
     background: rgba(0,0,0,0.3);
     border-bottom: 1px solid var(--border);
@@ -338,13 +338,19 @@ section[id],header[id]{scroll-margin-top:250px}
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  filter: grayscale(20%);
+  filter: grayscale(0%) !important;
+}
+
+/* Full-colour override — removes grayscale on both default and hover */
+.img-full-color img,
+.img-full-color:hover img {
+  filter: grayscale(0%) !important;
 }
 
 /* ====== FOOTER ====== */
 footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 48px}
 .footer-top{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;height:auto; padding:32px 0}
-.footer-logo img{height:54px;display:block;border-radius:6px; cursor:pointer; background-color: #ffffff; padding: 4px;}
+.footer-logo img{height:81px;display:block;border-radius:6px; cursor:pointer; background-color: #ffffff; padding: 4px;}
 .footer-nav{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
 .footer-nav a{font-size:0.75rem;color:var(--text-muted);text-decoration:none;transition:color 0.2s;letter-spacing:0.04em; cursor:pointer;}
 .footer-nav a:hover{color:var(--white)}
@@ -371,7 +377,7 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
   .services-grid{grid-template-columns:1fr}
   .spotlight-layout{grid-template-columns:1fr}
   .contact-layout{grid-template-columns:1fr}
-  .page-header { padding: 140px 20px 60px; }
+  .page-header { padding: 200px 20px 60px; }
   .board-section { padding: 60px 20px; }
   footer{padding:0 20px}
   .footer-top{flex-direction:column;text-align:center;height:auto;}
@@ -493,7 +499,7 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
           <p class="about-closing reveal reveal-delay-2">True reform begins with actionable intelligence.</p>
         </div>
         <!-- UPDATED: Policy/regulatory work image replacing previous placeholder -->
-        <div class="img-wrap img-h-380 reveal-right">
+        <div class="img-wrap img-h-380 img-full-color reveal-right">
           <div class="img-overlay"></div>
           <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" alt="Policy and Regulatory Work" loading="lazy">
         </div>
