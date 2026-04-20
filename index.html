@@ -27,7 +27,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{
   scroll-behavior:smooth;
-  font-size: 18px; /* Increased base font size across the board */
+  font-size: 18px;
 }
 
 /* Dynamic Black & Grey Shaded Background */
@@ -70,8 +70,8 @@ body{
 
 /* Attached AVIF Logo Shrink Animation */
 .nav-logo img{
-  height:80px; /* Base size */
-  background-color: #ffffff; /* Ensures contrast against dark backgrounds */
+  height:80px;
+  background-color: #ffffff;
   padding: 4px;
   border-radius:6px;
   transition:height 0.4s ease;
@@ -79,7 +79,7 @@ body{
   flex-shrink:0;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-#nav.scrolled .nav-logo img{height:50px;} /* Shrinks on scroll */
+#nav.scrolled .nav-logo img{height:50px;}
 
 .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
 .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;position:relative; cursor:pointer;}
@@ -296,7 +296,8 @@ section[id],header[id]{scroll-margin-top:160px}
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%);
+    object-position: top center;
+    filter: grayscale(30%);
     transition: filter 0.4s ease;
 }
 .board-card:hover .board-img-wrap img {
@@ -324,6 +325,15 @@ section[id],header[id]{scroll-margin-top:160px}
 }
 .board-bio p + p {
     margin-top: 14px;
+}
+
+/* ====== SPOTLIGHT PHOTO (real person) ====== */
+.spotlight-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(20%);
 }
 
 /* ====== FOOTER ====== */
@@ -363,6 +373,7 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
   .footer-nav{justify-content:center}
   .footer-bottom{flex-direction:column;text-align:center}
 }
+
 #nav.menu-open .nav-links{
   display:flex;flex-direction:column;
   position:absolute;top:78px;left:0;right:0;
@@ -411,7 +422,6 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
     <div class="hero-grid"></div>
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
-    
     <div class="hero-content">
       <div class="hero-text">
         <p class="hero-eyebrow">Potentia Public Policy Institute</p>
@@ -476,9 +486,10 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
           </div>
           <p class="about-closing reveal reveal-delay-2">True reform begins with actionable intelligence.</p>
         </div>
+        <!-- UPDATED: Policy/regulatory work image replacing previous placeholder -->
         <div class="img-wrap img-h-380 reveal-right">
           <div class="img-overlay"></div>
-          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Inclusive Community" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" alt="Policy and Regulatory Work" loading="lazy">
         </div>
       </div>
     </div>
@@ -523,12 +534,13 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
     </div>
   </section>
 
+  <!-- UPDATED: Leadership Spotlight now uses real Thomas Cook photo -->
   <section id="leadership">
     <div class="section-inner">
       <div class="spotlight-layout">
         <div class="img-wrap img-h-440 reveal-left">
           <div class="img-overlay"></div>
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Thomas Cook" loading="lazy">
+          <img src="images/Cook_Thomas_8211.avif" alt="C. Thomas Cook" loading="lazy" class="spotlight-photo">
         </div>
         <div>
           <p class="section-eyebrow reveal">Leadership Spotlight</p>
@@ -571,7 +583,11 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
     </div>
   </section>
 
-</div> <div id="about-view" class="page-view">
+</div>
+
+<!-- ====== ABOUT / BOARD PAGE ====== -->
+<!-- UPDATED: All 4 board member photos now use real uploaded images -->
+<div id="about-view" class="page-view">
   
   <header class="page-header">
       <p class="page-eyebrow">Potentia Public Policy Institute</p>
@@ -582,9 +598,10 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
   <section class="board-section">
       <div class="board-grid">
           
+          <!-- Board Member 1: C. Thomas Cook -->
           <div class="board-card reveal">
               <div class="board-img-wrap">
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="C. Thomas Cook">
+                  <img src="images/Cook_Thomas_8211.avif" alt="C. Thomas Cook">
               </div>
               <h3 class="board-name">C. Thomas Cook</h3>
               <p class="board-title">Board President & Lead Solutions Specialist</p>
@@ -594,44 +611,51 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
               </div>
           </div>
 
+          <!-- Board Member 2: John Foote -->
           <div class="board-card reveal reveal-delay-1">
               <div class="board-img-wrap">
-                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Board Member 2">
+                  <img src="images/John_Foote.avif" alt="John Foote">
               </div>
-              <h3 class="board-name">John Villegas-Grubbs</h3>
-              <p class="board-title">Board Member / Creator of the Brick™ Method</p>
+              <h3 class="board-name">John Foote</h3>
+              <p class="board-title">Board Member — Behavioral Support & IDD Consultation</p>
               <div class="board-bio">
-                  <p>Please paste John's biography directly into this section. Since the new Wix page is not yet indexed by search engines, I was unable to fetch the raw text programmatically.</p>
-                  <p>This layout ensures that the typography perfectly matches the sophisticated structure of the rest of the application.</p>
+                  <p>With over 30 years of experience in employment, workforce development, and advocacy for people with disabilities, John is a strategic thinker, skilled networker, and proven community bridge builder committed to not-for-profit transformation and systemic policy change.</p>
+                  <p>John specializes in behavioral support consultation and individualized service design for adults with intellectual and developmental disabilities (IDD), with particular expertise in community integration and deinstitutionalization transition planning — providing consultation to organizations across the United States and Canada.</p>
               </div>
           </div>
 
+          <!-- Board Member 3: Patricia Dowse -->
           <div class="board-card reveal">
               <div class="board-img-wrap">
-                  <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" alt="Board Member 3">
+                  <img src="images/Patricia_Dowse.avif" alt="Patricia Dowse">
               </div>
-              <h3 class="board-name">[Board Member 3 Name]</h3>
-              <p class="board-title">[Board Member Title / Role]</p>
+              <h3 class="board-name">Patricia Dowse</h3>
+              <p class="board-title">Board Member — Workforce Development & Disability Employment</p>
               <div class="board-bio">
-                  <p>Please paste the biography for your third board member right here. Keep the paragraphs enclosed within the standard "p" HTML tags to maintain styling.</p>
+                  <p>Patricia brings more than 30 years of hands-on expertise in employment advocacy, workforce skill training, and systems-change leadership for people with disabilities. A strategic thinker and accomplished networker, she has cultivated deep connections with businesses, technology companies, and national and state policy leaders.</p>
+                  <p>Her work centers on forging innovative pathways to employment — partnering with disability rehabilitation providers, educators, and workforce development teams to ensure individuals with disabilities are active, employed, and fully engaged in the workforce.</p>
               </div>
           </div>
 
+          <!-- Board Member 4: Roger Deshaies -->
           <div class="board-card reveal reveal-delay-1">
               <div class="board-img-wrap">
-                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Board Member 4">
+                  <img src="images/Roger_Deshaies.avif" alt="Roger Deshaies">
               </div>
-              <h3 class="board-name">[Board Member 4 Name]</h3>
-              <p class="board-title">[Board Member Title / Role]</p>
+              <h3 class="board-name">Roger Deshaies</h3>
+              <p class="board-title">Board Member — Policy Analysis & Medicaid Strategy</p>
               <div class="board-bio">
-                  <p>Please paste the biography for your fourth board member right here. Once all photos and text are plugged in, your About Page will be completely populated.</p>
+                  <p>Roger is a seasoned policy analyst and Medicaid strategy expert with more than seven years of leadership across JVGA and Associates and Deshaies Consulting. His work focuses on driving impactful social service transformation through evidence-based policy analysis, streamlined processes, and sustainable organizational growth.</p>
+                  <p>Known for his ability to cultivate lasting partnerships and realign organizational focus, Roger ensures that complex policy initiatives are transitioned effectively — delivering long-term operational improvements for the agencies and communities he serves.</p>
               </div>
           </div>
 
       </div>
   </section>
 
-</div> <footer>
+</div>
+
+<footer>
   <div class="footer-top">
     <a onclick="navigate('home', 'hero')" class="footer-logo">
       <img src="Potentia Logo.avif" alt="Potentia Logo">
@@ -651,21 +675,14 @@ footer{background:rgba(0,0,0,0.6);border-top:1px solid var(--border);padding:0 4
 <script>
 // SPA Router Logic
 function navigate(viewId, sectionId = null) {
-  // Hide all views
   document.querySelectorAll('.page-view').forEach(el => {
     el.classList.remove('active');
   });
-  
-  // Show target view
   document.getElementById(viewId + '-view').classList.add('active');
-  
-  // Close mobile menu if open
   const nav = document.getElementById('nav');
   const hamburger = document.getElementById('hamburger');
   if(nav) nav.classList.remove('menu-open');
   if(hamburger) hamburger.classList.remove('open');
-
-  // Handle scrolling
   if (sectionId) {
     setTimeout(() => {
       const target = document.getElementById(sectionId);
@@ -702,12 +719,11 @@ const revealObserver = new IntersectionObserver((entries) => {
     if(entry.isIntersecting) {
       entry.target.classList.add('visible');
     } else {
-      entry.target.classList.remove('visible'); // removes class so it fades back in if scrolled away
+      entry.target.classList.remove('visible');
     }
   });
 }, {threshold: 0.1, rootMargin: "0px 0px -50px 0px"});
 
-// Apply to elements
 document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
   revealObserver.observe(el);
 });
