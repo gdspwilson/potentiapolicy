@@ -390,6 +390,20 @@ section[id],header[id]{scroll-margin-top:250px}
   filter: grayscale(0%) !important;
 }
 
+/* ====== CHANGE LIST (Interim Executive Leadership page) ====== */
+.change-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;margin-top:8px;}
+.change-list li{display:flex;align-items:flex-start;gap:12px;font-size:0.9rem;line-height:1.65;color:var(--text-muted);font-weight:300;}
+.change-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:8px;}
+@media(max-width:768px){.change-list{grid-template-columns:1fr;}}
+
+/* Static (non-scrolling) reuse of the .stag pill chip for a wrapped grid */
+.chip-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;}
+.chip-grid .stag{margin:0;}
+
+/* 4-column stat grid variant of .hero-stats, for use outside the hero */
+.stats-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+@media(max-width:900px){.stats-grid-4{grid-template-columns:1fr 1fr;}}
+
 /* ====== FOOTER ====== */
 footer{background:rgba(214,231,248,0.7);border-top:1px solid var(--border);padding:0 48px}
 .footer-top{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;height:auto; padding:32px 0}
@@ -458,9 +472,8 @@ footer{background:rgba(214,231,248,0.7);border-top:1px solid var(--border);paddi
     <img src="Potentia%20Logo.avif" alt="Potentia Logo">
   </a>
   <ul class="nav-links">
-    <li><a onclick="navigate('home', 'about')">Our Mission</a></li>
-    <li><a onclick="navigate('home', 'expertise')">Initiatives</a></li>
-    <li><a onclick="navigate('home', 'leadership')">Leadership</a></li>
+    <li><a onclick="navigate('home')">Our Mission</a></li>
+    <li><a onclick="navigate('interim-leadership')">Interim Leadership</a></li>
     <li><a onclick="navigate('about')">About Us</a></li>
     <li><a onclick="navigate('specialists')">Solution Specialists</a></li>
     <li><a onclick="navigate('technology')">Technology</a></li>
@@ -641,6 +654,142 @@ footer{background:rgba(214,231,248,0.7);border-top:1px solid var(--border);paddi
         </div>
       </div>
     </div>
+  </section>
+
+</div>
+
+<!-- ====== INTERIM EXECUTIVE LEADERSHIP PAGE ====== -->
+<div id="interim-leadership-view" class="page-view">
+
+  <header class="page-header">
+      <p class="page-eyebrow">Potentia Public Policy Institute</p>
+      <h1 class="page-title">Interim Executive Leadership</h1>
+      <p class="page-subtitle">Experienced leadership when an organization cannot afford to stand still.</p>
+  </header>
+
+  <section class="board-section">
+
+    <div class="spotlight-layout" style="margin-bottom:88px;">
+      <div class="img-wrap img-h-440 reveal-left">
+        <div class="img-overlay"></div>
+        <img src="Cook_Thomas_Interim_Leadership.jpg" alt="C. Thomas Cook speaking at a podium" loading="lazy" class="spotlight-photo">
+      </div>
+      <div>
+        <p class="section-eyebrow reveal">Available Now</p>
+        <h2 class="section-title reveal">Leadership Through Transition</h2>
+        <p class="hero-tagline reveal" style="margin-bottom: 20px;">C. Thomas Cook, M.A., S.Psy.S., Board President, Potentia Public Policy Institute</p>
+
+        <div class="spotlight-body reveal">
+          <p>Leadership transitions can create uncertainty at precisely the time an organization needs stability, clarity, and forward movement. Potentia Public Policy Institute provides interim executive leadership to organizations serving people with intellectual and developmental disabilities, behavioral health needs, and other human-service populations.</p>
+          <div class="spotlight-divider"><div class="spotlight-divider-dot"></div></div>
+          <p>C. Thomas Cook, Potentia's founder and Board President, is available to serve as an Interim CEO or Executive Director while an organization conducts a permanent executive search, responds to organizational challenges, or prepares for its next stage of development. He brings more than four decades of experience in disability and human services, including more than 25 years in senior executive leadership.</p>
+          <div class="spotlight-divider"><div class="spotlight-divider-dot"></div></div>
+          <a href="mailto:tcook@potentiapolicy.org" class="btn-primary" style="margin-top:10px;">Discuss an Engagement</a>
+          <a href="https://www.linkedin.com/in/cthomascook1/" target="_blank" class="btn-outline" style="margin-top:10px; margin-left: 10px;">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-bottom:52px;">
+      <p class="section-eyebrow reveal" style="justify-content:center;">By the Numbers</p>
+      <h2 class="section-title reveal">Executive Leadership at a Glance</h2>
+    </div>
+    <div class="hero-card reveal" style="max-width:920px;margin:0 auto 24px;">
+      <div class="stats-grid-4">
+        <div class="hero-stat">
+          <div class="hero-stat-number">450</div>
+          <div class="hero-stat-label">Employees in multi-state operations</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">$20M</div>
+          <div class="hero-stat-label">Annual regional revenue responsibility</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">60%</div>
+          <div class="hero-stat-label">Increase in Delaware state fiscal support for I/DD services over five years</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">40+ Yrs</div>
+          <div class="hero-stat-label">Leadership and service in the disability and human-services field</div>
+        </div>
+      </div>
+    </div>
+    <p class="section-lead reveal" style="text-align:center;margin:0 auto 88px;max-width:760px;">Recognized with the 2026 ACCSES President's Award for ten years of "trusted counsel," a 2025 Marquis Who's Who inclusion, a 2024 tribute from the Delaware House of Representatives, and the 2019 ACCSES Advocate of the Year Award.</p>
+
+    <div style="margin-bottom:72px;">
+      <p class="section-eyebrow reveal">How Interim Leadership Works</p>
+      <h2 class="section-title reveal">Grounded in Operations and Strategy</h2>
+      <div class="about-intro reveal">
+        <p>An interim executive should do more than keep the CEO's chair occupied. Mr. Cook's approach begins with listening to the Board, leadership team, employees, people receiving services and their families, and key community and government partners, to understand what is working, identify what requires immediate attention, and establish priorities that maintain organizational stability while positioning the permanent CEO for success.</p>
+        <br>
+        <p>As Regional Director for Dungarvin, Mr. Cook led multi-state operations across Delaware, Illinois, New Jersey, and Wisconsin, overseeing approximately 450 employees while regional revenue grew from roughly $16 million to $20 million annually. He later served as Executive Director of statewide disability provider associations in Wisconsin and Delaware, and, most recently, as Executive Director of the San Gabriel Valley Residential Facility in California. There, he maintained continuity of services through Board leadership changes, staff vacancies, regulatory challenges, and multiple concurrent organizational pressures.</p>
+      </div>
+    </div>
+
+    <div style="margin-bottom:72px;">
+      <p class="section-eyebrow reveal">An Interim Leader Who Understands the Environment</p>
+      <h2 class="section-title reveal">Fluent in Medicaid, Regulation, and Public Policy</h2>
+      <div class="about-intro reveal">
+        <p>Organizations serving people with disabilities operate within an increasingly complicated environment of Medicaid financing, workforce shortages, regulatory requirements, and changing service models. As Executive Director of the Ability Network of Delaware, Mr. Cook led a multi-year legislative and budget strategy that helped produce a 60 percent increase in state fiscal support for I/DD services over five years, securing $42 million in additional state appropriations and $59 million in federal matching funds.</p>
+        <br>
+        <p>He currently chairs the ACCSES Advisory Council and advises disability provider associations confronting Medicaid reimbursement, workforce, provider-capacity, and system-transformation challenges. That background gives him an understanding of both sides of the relationship between government and providers: the fiscal and regulatory responsibilities of public agencies, and the operational realities organizations face translating public policy into quality services.</p>
+      </div>
+    </div>
+
+    <div style="margin-bottom:88px;">
+      <p class="section-eyebrow reveal">Developing the Team, Not Replacing It</p>
+      <h2 class="section-title reveal">A Leadership Philosophy Built to Outlast the Assignment</h2>
+      <div class="about-intro reveal">
+        <p>Mr. Cook believes one of the most important responsibilities of an interim executive is to strengthen the organization that will remain after the interim assignment ends. His approach is straightforward: listen first, establish direction, put capable people in the right roles, give them meaningful authority, and create accountability for results. This means identifying the knowledge and talent already within an organization rather than assuming existing leadership must be replaced.</p>
+      </div>
+      <p class="about-closing reveal reveal-delay-1">The objective is not to make an organization dependent upon its interim executive. It is to leave the organization stronger, more focused, and better prepared for its next leader.</p>
+    </div>
+
+    <div style="margin-bottom:88px;">
+      <p class="section-eyebrow reveal">When It Helps Most</p>
+      <h2 class="section-title reveal">Strategic Leadership During Periods of Change</h2>
+      <p class="about-intro reveal" style="margin-bottom:24px;">Interim leadership can be particularly valuable when an organization is:</p>
+      <ul class="change-list reveal">
+        <li>Conducting a CEO or Executive Director search following a retirement or departure</li>
+        <li>Managing an unexpected executive vacancy</li>
+        <li>Experiencing Board or senior leadership transition</li>
+        <li>Facing financial, regulatory, compliance, or operational challenges</li>
+        <li>Preparing for organizational restructuring or strategic planning</li>
+        <li>Managing significant changes in Medicaid reimbursement or public policy</li>
+        <li>Seeking to strengthen relationships with government agencies, legislators, funders, or community partners</li>
+        <li>Developing or strengthening its senior leadership team</li>
+        <li>Needing experienced executive leadership without prematurely committing to a permanent hire</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom:40px;">
+      <p class="section-eyebrow reveal">Engagement Scope</p>
+      <h2 class="section-title reveal">What Potentia Can Provide</h2>
+      <p class="about-intro reveal" style="margin-bottom:28px;">Interim engagements can be structured around the needs of the organization and its Board. Depending upon the assignment, Mr. Cook can provide day-to-day executive leadership together with focused assistance in areas such as:</p>
+      <div class="chip-grid reveal">
+        <span class="stag"><span class="stag-dot"></span>Board &amp; Governance Support</span>
+        <span class="stag"><span class="stag-dot"></span>Financial &amp; Operational Oversight</span>
+        <span class="stag"><span class="stag-dot"></span>Strategic Planning</span>
+        <span class="stag"><span class="stag-dot"></span>Leadership Team Development</span>
+        <span class="stag"><span class="stag-dot"></span>Succession Planning</span>
+        <span class="stag"><span class="stag-dot"></span>Medicaid &amp; HCBS Strategy</span>
+        <span class="stag"><span class="stag-dot"></span>Regulatory &amp; Compliance Response</span>
+        <span class="stag"><span class="stag-dot"></span>Government &amp; Community Relations</span>
+        <span class="stag"><span class="stag-dot"></span>Organizational Assessment</span>
+        <span class="stag"><span class="stag-dot"></span>Program Development</span>
+        <span class="stag"><span class="stag-dot"></span>Stakeholder Engagement</span>
+        <span class="stag"><span class="stag-dot"></span>Public Policy &amp; Advocacy</span>
+      </div>
+      <p class="section-lead reveal" style="margin:28px auto 0;text-align:center;max-width:760px;">Each engagement begins with listening and assessment, followed by agreement with the Board on priorities, authority, expected outcomes, and the work that should be accomplished before a permanent executive assumes leadership.</p>
+    </div>
+
+    <div style="text-align:center;margin-top:96px;">
+      <p class="section-eyebrow reveal" style="justify-content:center;">Experienced Leadership. A Stronger Transition.</p>
+      <h2 class="section-title reveal">Measured by What Happens After</h2>
+      <p class="section-lead reveal" style="margin:0 auto 28px;">Potentia's goal is to provide the stability an organization needs today while strengthening its leadership, operations, relationships, and strategic direction for tomorrow. To discuss an interim CEO, Executive Director, or transition leadership engagement, contact Potentia Public Policy Institute.</p>
+      <a href="mailto:tcook@potentiapolicy.org" class="btn-primary">Contact Us</a>
+    </div>
+
   </section>
 
 </div>
@@ -960,8 +1109,9 @@ footer{background:rgba(214,231,248,0.7);border-top:1px solid var(--border);paddi
       <img src="Potentia%20Logo.avif" alt="Potentia Logo">
     </a>
     <ul class="footer-nav">
-      <li><a onclick="navigate('home', 'about')">Our Mission</a></li>
+      <li><a onclick="navigate('home')">Our Mission</a></li>
       <li><a onclick="navigate('home', 'expertise')">Initiatives</a></li>
+      <li><a onclick="navigate('interim-leadership')">Interim Leadership</a></li>
       <li><a onclick="navigate('about')">About Us</a></li>
       <li><a onclick="navigate('specialists')">Solution Specialists</a></li>
       <li><a onclick="navigate('technology')">Technology</a></li>
